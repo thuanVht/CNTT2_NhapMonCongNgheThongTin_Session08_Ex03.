@@ -1,0 +1,40 @@
+BÁO CÁO PHÂN TÍCH VÀ HƯỚNG DẪN CÀI ĐẶT VS CODE (DÀNH CHO SINH VIÊN NĂM 1
+PHẦN I: BÁO CÁO PHÂN TÍCH INPUT / OUTPUT (I/O)
+Mục này trình bày quá trình chuyển hóa dữ liệu thô (Input) thành sản phẩm trực quan (Output) trên nền tảng StackEdit / Markdown viewer.1. Input (Dữ liệu đầu vào / Văn bản thô)Đặc điểm: Là các chuỗi ký tự thuần túy (Plain text) bao gồm các cú pháp Markdown chưa được render (ví dụ: - [ ] cho task list, | Cột | cho bảng, cặp dấu ` cho inline code, và cặp ``` cho code block).Ví dụ đoạn Input thô:- [ ] Cài đặt VS Code
+Biến `python_version` dùng để lưu phiên bản.
+#Tiêu đề đặc biệt không bị render.
+2. Output (Dữ liệu đầu ra / Giao diện render đẹp mắt trên StackEdit)
+Đặc điểm: Trình soạn thảo StackEdit phân tích cú pháp Markdown và hiển thị thành giao diện trực quan, giàu tính tương tác:Danh sách công việc (Task List) chuyển thành các ô checkbox có thể bấm chọn (tick/untick) trực tiếp trên giao diện web.Các biến ngắn gọn hiển thị dưới dạng Inline Code (nền xám nhẹ, khác biệt phông chữ so với văn bản thông thường).Các đoạn code Python dài hiển thị trong các Code Block có Syntax Highlighting (tô màu từ khóa, hàm, chuỗi rõ ràng).Bảng dữ liệu được kẻ khung ngay ngắn, dễ đọc.Các ký tự đặc biệt được escape chính xác nhờ ký tự \ (ví dụ hiển thị nguyên vẹn dấu # thay vì bị hiểu nhầm là thẻ tiêu đề).PHẦN II: SOURCE CODE MARKDOWN HOÀN CHỈNHDưới đây là mã nguồn Markdown đầy đủ, chuẩn xác đáp ứng toàn bộ các yêu cầu nghiệp vụ và bẫy dữ liệu dành cho tân sinh viên:# Hướng dẫn cài đặt và sử dụng VS Code cho Tân sinh viên
+
+Chào mừng các bạn đến với học phần lập trình cơ bản! Tài liệu này sẽ hướng dẫn các bạn từng bước thiết lập môi trường làm việc chuyên nghiệp với **Visual Studio Code (VS Code)**.
+
+---
+
+## 1. Danh sách việc cần làm (Task List)
+- [x] Tải bộ cài chính thức từ trang chủ VS Code.
+- [ ] Tiến hành cài đặt phần mềm vào máy tính cá nhân.
+- [ ] Cài đặt Extension hỗ trợ ngôn ngữ Python.
+- [ ] Mở Terminal và kiểm tra kết quả cài đặt thành công.
+
+---
+
+## 2. Hướng dẫn sử dụng Terminal & Biến hệ thống
+
+Trong quá trình thao tác, nếu bạn cần kiểm tra cấu hình, các biến ngắn gọn như `install_path` hoặc `python_version` sẽ được nhắc đến thường xuyên trong tài liệu hướng dẫn của giảng viên.
+
+Để kiểm tra xem môi trường đã sẵn sàng chưa, hãy mở cửa sổ **Terminal** trong VS Code và chạy câu lệnh sau:
+
+```bash
+# Kiểm tra phiên bản Python hiện tại trên máy
+python --version
+
+# Nâng cấp công cụ quản lý thư viện pip
+pip install --upgrade pip
+Giải thích: Những đoạn lệnh trên phải được gõ chính xác vào cửa sổ dòng lệnh (Terminal) của VS Code, tuyệt đối không dán trực tiếp vào file mã nguồn Python.3. Ví dụ đoạn code Python mẫuDưới đây là cấu trúc cơ bản của một đoạn code Python dùng để kiểm tra môi trường học tập của lớp:def chao_mung_lop(ten_hoc_phan: str, ma_lop: str) -> None:
+    bien_moi_truong = "Visual Studio Code"
+    print(f"Chào mừng lớp {ma_lop} tham gia môn {ten_hoc_phan}!")
+    print(f"Môi trường lập trình đang sử dụng: {bien_moi_truong}")
+
+if __name__ == "__main__":
+    chao_mung_lop("Lập trình cơ bản", "CNTT-K25")
+4. Bảng so sánh nhanh: StackEdit và VS CodeBảng dưới đây giúp sinh viên phân biệt rõ mục đích sử dụng của hai công cụ cốt lõi trong suốt học kỳ:Tiêu chíStackEdit (Trực tuyến)VS Code (Cục bộ máy tính)Môi trường hoạt độngChạy trực tiếp trên trình duyệt Web.Phần mềm cài đặt trực tiếp trên hệ điều hành.Ưu điểm nổi bật- Không cần cài đặt phức tạp.- Tự động lưu trữ đám mây.- Xem trước (Live Preview) trực quan.- Hỗ trợ mạnh mẽ nhiều ngôn ngữ lập trình.- Tích hợp sẵn Git và Terminal thông minh.- Kho tiện ích mở rộng (Extension) khổng lồ.Mục đích khuyên dùngDùng để viết ghi chú nhanh, làm báo cáo môn học dạng Markdown.Dùng làm môi trường chính để viết code, chạy chương trình và làm đồ án.5. Lưu ý quan trọng về ký tự đặc biệt trong Markdown (Bẫy dữ liệu)Khi soạn thảo báo cáo, nếu bạn muốn hiển thị các ký tự đặc biệt như dấu sao \* hoặc dấu thăng \# mà không muốn hệ thống hiểu nhầm thành lệnh định dạng (in đậm, tiêu đề), hãy sử dụng ký tự escape `\
